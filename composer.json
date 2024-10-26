@@ -1,5 +1,5 @@
 {
-    "name": "BblStudio/BblStudio",
+    "name": "bbl-studio/bbl-studio",
     "description": "The BblStudio package is a versatile file editing tool designed for laravel bootstrap to streamline content management and editing within web applications",
     "type": "library",
      "version": "1.0.0",
