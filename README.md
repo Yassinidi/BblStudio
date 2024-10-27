@@ -1,53 +1,77 @@
-# BBL Studio Configuration
-# ========================
-# VEDITOR mode options:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBL Studio Configuration</title>
+</head>
+<body>
+
+<h1>BBL Studio Configuration</h1>
+
+<h2>Installation</h2>
+<pre>
+1. Run the following command to install BBL Studio:
+   composer require bblstudio/bblstudio
+
+2. Publish the package assets:
+   php artisan vendor:publish --provider="BBLStudio\BBLStudioServiceProvider"
+</pre>
+
+<h2>VEDITOR Mode Options</h2>
+<pre>
 # - AUTO: Automatic configuration.
 # - CONFIG: Manual configuration.
 # - AUTO + CONFIG: Automatic with additional configurations.
+VEDITOR = "AUTO"  # Required for AUTO mode.
+</pre>
 
-VEDITOR="AUTO"  # Options: AUTO / CONFIG / AUTO + CONFIG. Required for AUTO mode.
+<h2>Path Configuration</h2>
+<pre>
+VEDITOR_FOLDER_VIEWS_PATH = "user_page/auth"  # Required for AUTO mode.
+</pre>
 
-# Path Configuration
-# ------------------
-VEDITOR_FOLDER_VIEWS_PATH="user_page/auth"  # Required for AUTO mode. Path to the folder where views are stored.
+<h2>URL and Routing</h2>
+<pre>
+VEDITOR_URL = "bblstudio"  # Required for AUTO + CONFIG.
+VEDITOR_ROUTE_NAME = "bblstudio"  # Required for AUTO + CONFIG.
+</pre>
 
-# URL and Routing
-# ---------------
-VEDITOR_URL="bblstudio"  # Required for AUTO + CONFIG. The base URL for accessing the VEDITOR.
-VEDITOR_ROUTE_NAME="bblstudio"  # Required for AUTO + CONFIG. The route name used in the URL.
-
-# Save Configuration
-# ------------------
+<h2>Save Configuration</h2>
+<pre>
 # Options: origin / copy / fun
 # - origin: Save directly to the original file.
 # - copy: Save a copy of the file.
 # - fun: Use a custom function to save.
-VEDITOR_SAVE="origin"  # Required for AUTO {origin / copy / fun} + CONFIG {fun}.
+VEDITOR_SAVE = "origin"  # Required for AUTO {origin / copy / fun} + CONFIG {fun}.
+</pre>
 
-# Custom Save Function Configuration
-# ----------------------------------
+<h2>Custom Save Function Configuration</h2>
+<pre>
 # Required if VEDITOR_SAVE is set to "fun".
-VEDITOR_SAVE_DATA_FUN_CONTROLLER_NAME=""  # Controller name for the custom save function.
-VEDITOR_SAVE_DATA_FUN_METHOD_NAME=""  # Method name for the custom save function.
-# The function signature should be: fun($filePath or $fileName, $newContent).
+VEDITOR_SAVE_DATA_FUN_CONTROLLER_NAME = ""  # Controller name for the custom save function.
+VEDITOR_SAVE_DATA_FUN_METHOD_NAME = ""  # Method name for the custom save function.
+</pre>
 
-# Content Retrieval Configuration
-# -------------------------------
+<h2>Content Retrieval Configuration</h2>
+<pre>
 # Required for CONFIG mode.
-VEDITOR_GET_CONTENT_BY_NAME_CONTROLLER_NAME=""  # Controller name for retrieving content by name.
-VEDITOR_GET_CONTENT_BY_NAME_METHOD_NAME=""  # Method name for retrieving content by name.
-# The function signature should be: fun($fileName).
+VEDITOR_GET_CONTENT_BY_NAME_CONTROLLER_NAME = ""  # Controller name for retrieving content by name.
+VEDITOR_GET_CONTENT_BY_NAME_METHOD_NAME = ""  # Method name for retrieving content by name.
+</pre>
 
-# Structure Listing Configuration
-# -------------------------------
+<h2>Structure Listing Configuration</h2>
+<pre>
 # Required for CONFIG mode.
-VEDITOR_LIST_STRUCTER_CONTROLLER_NAME=""  # Controller name for listing the structure.
-VEDITOR_LIST_STRUCTER_METHOD_NAME=""  # Method name for listing the structure.
-# The structure format should be: [[fileName => string (unique), folderName => string], [...]].
+VEDITOR_LIST_STRUCTER_CONTROLLER_NAME = ""  # Controller name for listing the structure.
+VEDITOR_LIST_STRUCTER_METHOD_NAME = ""  # Method name for listing the structure.
+</pre>
 
-# Additional Configuration
-# ------------------------
-VEDITOR_SHOW_PHP=true  # Enable or disable PHP code display in the editor.
-VEDITOR_MIDDLEWARE_ALIAS=""  # Middleware alias used for routing if needed.
+<h2>Additional Configuration</h2>
+<pre>
+VEDITOR_SHOW_PHP = true  # Enable or disable PHP code display in the editor.
+VEDITOR_MIDDLEWARE_ALIAS = ""  # Middleware alias used for routing if needed.
+</pre>
 
-
+</body>
+</html>
