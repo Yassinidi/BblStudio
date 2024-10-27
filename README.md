@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <body>
 
-<h1>BBL Studio Configuration</h1>
+<h1>BBL Studio </h1>
 <img src="https://github.com/Yassinidi/BblStudio/blob/eeaaf6e6383cc3716fc5c3e1c631ccb920959a43/public/BblStudio/img/Design%20sans%20titre.png?raw=true" />
+<h2>Description</h2>
+<pre>
+BBL Studio is a powerful tool for managing and editing your application views. 
+This configuration file sets up the VEDITOR mode and various options for 
+customizing how the editor operates within your Laravel application.
+</pre>
+<h2>Requirements</h2>
+<pre>
+- Laravel: Minimum version 8
+- PHP: Minimum version 8
+</pre> 
+
 <h2>Installation</h2>
 <pre>
 1. Run the following command to install BBL Studio:
@@ -11,8 +23,8 @@
 2. Publish the package assets:
    php artisan vendor:publish --provider="BBLStudio\BBLStudioServiceProvider"
 </pre>
-
-<h2>VEDITOR Mode Options</h2>
+<h1>BBL Studio Configuration .env file</h1>
+<h2>Mode Options</h2>
 <pre>
 # - AUTO: Automatic configuration.
 # - CONFIG: Manual configuration.
