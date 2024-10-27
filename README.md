@@ -2,7 +2,7 @@
 <body>
 
 <h1>BBL Studio Configuration</h1>
-![alt text](https://github.com/Yassinidi/BblStudio/blob/eeaaf6e6383cc3716fc5c3e1c631ccb920959a43/public/BblStudio/img/Design%20sans%20titre.png?raw=true)
+<img src="https://github.com/Yassinidi/BblStudio/blob/eeaaf6e6383cc3716fc5c3e1c631ccb920959a43/public/BblStudio/img/Design%20sans%20titre.png?raw=true" />
 <h2>Installation</h2>
 <pre>
 1. Run the following command to install BBL Studio:
