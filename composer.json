@@ -1,6 +1,19 @@
 {
     "name": "bblstudio/bblstudio",
     "description": "The BblStudio package is a versatile file editing tool designed for laravel bootstrap to streamline content management and editing within web applications",
+    "homepage": "https://github.com/Yassinidi/BblStudio",
+        "keywords": [
+        "laravel",
+        "content management",
+        "file editor",
+        "blade templates",
+        "bootstrap",
+        "wysiwyg",
+        "text editor",
+        "view management",
+        "php package",
+        "web development"
+    ],
     "type": "library",
      "version": "1.0.0",
     "autoload": {
