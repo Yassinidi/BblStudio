@@ -19,9 +19,16 @@ customizing how the editor operates within your Laravel application.
 <pre>
 1. Run the following command to install BBL Studio:
    composer require bblstudio/bblstudio
-
-2. Publish the package assets:
-   php artisan vendor:publish --provider="BBLStudio\BBLStudioServiceProvider"
+   
+2. Publish the package assets(if not run auto!):
+   php artisan vendor:publish --tag=laravel-assets --ansi --force
+   
+3. Publish the package views:
+   php artisan vendor:publish --tag=laravel-views --ansi --force
+   
+4. Publish the package config:
+   php artisan vendor:publish --tag=config --ansi --force
+   
 </pre>
 <h2>For using Bootstrap components</h2>
 <pre>
