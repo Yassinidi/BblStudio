@@ -34,7 +34,7 @@ VEDITOR = "AUTO"  # Required for AUTO mode.
 
 <h2>Path Configuration</h2>
 <pre>
-VEDITOR_FOLDER_VIEWS_PATH = "user_page/auth"  # Required for AUTO mode.
+VEDITOR_FOLDER_VIEWS_PATH = "user_page/auth"  # Required for AUTO mode or Default =Views.
 </pre>
 
 <h2>URL and Routing</h2>
@@ -57,6 +57,7 @@ VEDITOR_SAVE = "origin"  # Required for AUTO {origin / copy / fun} + CONFIG {fun
 # Required if VEDITOR_SAVE is set to "fun".
 VEDITOR_SAVE_DATA_FUN_CONTROLLER_NAME = ""  # Controller name for the custom save function.
 VEDITOR_SAVE_DATA_FUN_METHOD_NAME = ""  # Method name for the custom save function.
+# The function signature should be: fun($filePath or $fileName, $newContent).
 </pre>
 
 <h2>Content Retrieval Configuration</h2>
@@ -64,6 +65,7 @@ VEDITOR_SAVE_DATA_FUN_METHOD_NAME = ""  # Method name for the custom save functi
 # Required for CONFIG mode.
 VEDITOR_GET_CONTENT_BY_NAME_CONTROLLER_NAME = ""  # Controller name for retrieving content by name.
 VEDITOR_GET_CONTENT_BY_NAME_METHOD_NAME = ""  # Method name for retrieving content by name.
+# The function signature should be: fun($fileName).
 </pre>
 
 <h2>Structure Listing Configuration</h2>
@@ -71,6 +73,7 @@ VEDITOR_GET_CONTENT_BY_NAME_METHOD_NAME = ""  # Method name for retrieving conte
 # Required for CONFIG mode.
 VEDITOR_LIST_STRUCTER_CONTROLLER_NAME = ""  # Controller name for listing the structure.
 VEDITOR_LIST_STRUCTER_METHOD_NAME = ""  # Method name for listing the structure.
+# The structure format should be: [[fileName => string (unique), folderName => string], [...]].
 </pre>
 
 <h2>Additional Configuration</h2>
