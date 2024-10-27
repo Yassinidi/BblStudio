@@ -23,6 +23,15 @@ customizing how the editor operates within your Laravel application.
 2. Publish the package assets:
    php artisan vendor:publish --provider="BBLStudio\BBLStudioServiceProvider"
 </pre>
+<h2>For using Bootstrap components</h2>
+<pre>
+add this imoprt in page Edit :
+   <link href="/vendor/BblStudio/css/editor.css" rel="stylesheet">      
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="/vendor/BblStudio/js/popper.min.js"></script>
+    <script src="/vendor/BblStudio/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.4/holder.js"></script>
+</pre>
 <h1>BBL Studio Configuration .env file</h1>
 <h2>Mode Options</h2>
 <pre>
