@@ -45,7 +45,7 @@ class VEditerController extends Controller
             '/@empty\s*\(.*?\)/' => '<div><!--($1)beginblade-->PHP code empty<!--endblade--></div>',
             '/@endempty/' => '<div><!--($1)beginblade-->PHP code endempty<!--endblade--></div>',
             '/{{\s*\$.*?\s*}}/' => '<div><!--($1)beginblade-->PHP code show<!--endblade--></div>',
-            '/{{\s*\.*?\s*}}/' => '<div><!--($1)beginblade-->PHP code show<!--endblade--></div>',
+             '/\{\{\s*(?!asset\()([^\}]*)\s*\}\}/' => '<!--($1)beginblade-->PHP code show<!--endblade--></div>',
             '/@php\s*\.*?\s*@endphp/' => '<div><!--($1)beginblade-->PHP code<!--endblade--></div>',
         ];
         else
@@ -84,7 +84,7 @@ class VEditerController extends Controller
             '/@empty\s*\(.*?\)/' => '<!--($1)beginblade--> <!--endblade-->',
             '/@endempty/' => '<!--($1)beginblade--> <!--endblade-->',
             '/{{\s*\$.*?\s*}}/' => '<!--($1)beginblade--> <!--endblade-->',
-            '/{{\s*\.*?\s*}}/' => '<!--($1)beginblade--> <!--endblade-->',
+            '/\{\{\s*(?!asset\()([^\}]*)\s*\}\}/' => '<!--($1)beginblade--> <!--endblade-->',
             '/@php\s*\.*?\s*@endphp/' => '<!--($1)beginblade--> <!--endblade-->',
         ];
         return $replacements;
@@ -94,6 +94,8 @@ class VEditerController extends Controller
         // Patterns for directives to wrap with comments
         $wrapPatterns = [
 
+            '//\{\{\s*asset\((.*?)\)\s*\}\}/' => '<div><!--($2)beginblade-->{{asset($1)}}<!--endblade--></div>', // Keep as is for capture
+            '/@lang\s*\((.*?)\)/' => '<div><!--($2)beginblade-->@lang($1)<!--endblade--></div>', // Keep as is for capture
             '/@vite\s*\((.*?)\)/' => '<div><!--($2)beginblade-->@vite($1)<!--endblade--></div>', // Keep as is for capture
             '/@push\s*\((.*?)\)/' => '<div><!--($2)beginblade-->@push($1)<!--endblade--></div>', // Keep as is for capture
             '/@endpush/' => '<div><!--($2)beginblade-->@endpush<!--endblade--></div>', // @endsection
