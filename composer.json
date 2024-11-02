@@ -15,7 +15,7 @@
         "web development"
     ],
     "type": "library",
-     "version": "1.0.0",
+     "version": "1.1.0",
     "autoload": {
         "psr-4": {
             "BblStudio\\BblStudio\\": "src/"
